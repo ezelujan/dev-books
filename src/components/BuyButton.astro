@@ -7,7 +7,7 @@ const country = Astro.request.headers.get("X-Vercel-IP-Country") ?? COL;
 
 const storeCountry = country === COL ? "col" : "usa";
 const countryName = country === COL ? "Colombia" : "Estados Unidos";
-
+console.log("IP DE VERCEL:", country);
 const { buy } = Astro.props;
 const url = buy[storeCountry];
 ---
